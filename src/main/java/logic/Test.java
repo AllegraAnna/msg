@@ -24,14 +24,12 @@ public class Test {
             for (ElementaryProduct e : jr.readElementaryProducts()) {
                 try {
                     
-                    BusinessRulesValidation b = new BusinessRulesValidation();
+//                    BusinessRulesValidation b = new BusinessRulesValidation();
                     
-                    b.isProductValid(e);
+//                    b.isProductValid(e);
                     System.out.println(e);
                     
-                } catch (IOException ex) {
-                    Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (Exception ex) {
+                }  catch (Exception ex) {
                     Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }

@@ -165,6 +165,11 @@ public class ElementaryProduct {
     public void setProduct(Product product) {
         this.product = product;
     }
+
+    @Override
+    public String toString() {
+        return "ElementaryProduct{" + "elementaryProductId=" + elementaryProductId + ", bonusMalus=" + bonusMalus + ", deductible=" + deductible + ", comprehensive=" + comprehensive + ", partial=" + partial + ", legacyPremium=" + legacyPremium + ", product=" + product + ", additionalProperties=" + additionalProperties + '}';
+    }
     
 }
 

@@ -9,41 +9,41 @@ import domain.ElementaryProduct;
 import org.joda.time.LocalDate;
 import org.joda.time.Years;
 
-public class BusinessRulesValidation {
+public class BusinessRulesValidation implements IBusinessRulesValidation {
 
-    public boolean isValidFrom(LocalDate startDate) {
+    private boolean isValidFrom(LocalDate startDate) {
         return startDate.isAfter(new LocalDate(2011, 12, 1));
     }
 
-    public boolean isValidCurrency(String currency) {
+    private boolean isValidCurrency(String currency) {
         return currency.toUpperCase().equals("EUR");
     }
 
-    public boolean isValidDuration(LocalDate startDate, LocalDate endDate) {
+    private boolean isValidDuration(LocalDate startDate, LocalDate endDate) {
         return Years.yearsBetween(startDate, endDate).getYears() == 1;
     }
 
-    public boolean isValidRegion(String region) {
+    private boolean isValidRegion(String region) {
         return region.toUpperCase().equals("EAST");
     }
 
-    public boolean isValidAgeMinimum(LocalDate age) {
+    private boolean isValidAgeMinimum(LocalDate age) {
         return Years.yearsBetween(age, new LocalDate()).getYears() >= 18;
     }
 
-    public boolean isValidAgeMaximum(LocalDate age) {
+    private boolean isValidAgeMaximum(LocalDate age) {
         return Years.yearsBetween(age, new LocalDate()).getYears() <= 65;
     }
 
-    public boolean isCarMileageValid(int mileage) {
+    private boolean isCarMileageValid(int mileage) {
         return mileage <= 250000;
     }
 
-    public boolean isCarYearValid(int year) {
+    private boolean isCarYearValid(int year) {
         return year >= 1980;
     }
 
-    public boolean isBonusMalusValid(int malus) {
+    private boolean isBonusMalusValid(int malus) {
         return malus >= -10;
     }
 
