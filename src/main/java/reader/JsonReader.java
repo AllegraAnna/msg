@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class JsonReader {
+public class JsonReader implements IJsonReader {
     
     public List<ElementaryProduct> readElementaryProducts() throws IOException{
         ObjectMapper mapper = new ObjectMapper();
